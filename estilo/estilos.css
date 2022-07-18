@@ -1,0 +1,227 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.navbar {
+    padding: 0px;
+}
+.navbar-brand img{
+    width: 100px;
+    height: 100px;
+}
+
+.navbar-toggler {
+    margin: 0px;
+    padding: 0px;
+    background-color: #EDEDED;
+}
+
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #EDEDED;
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Roboto Slab";
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+.nav-link:hover {
+    color: #840000;
+}
+
+/* Inicio */
+
+.contenidoPizza{
+    height: 700px;
+    width: 100%;
+    background-image: url(./asset/imagenes/pizza-02.jpg);
+    background-size: cover;
+    border-bottom: #000000 solid 3px;
+}
+
+.pizza {
+    position: absolute;
+    width: 280px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto Slab";
+    text-align: center;
+    margin-left: 140px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.pizza h2{
+    font-weight: 600;
+    color: #000000;
+}
+.pizza p{
+    font-weight: 400;
+}
+.pizza a{
+    text-decoration: none;
+    height: 70px;
+    width: 160px;
+    color: #840000;
+    background-color: #FFD249;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+}
+.pizza a:hover{
+    color: #FFD249;
+    background-color: #840000;
+    font-weight: 600;
+}
+
+
+.contenidoBurga{
+    height: 700px;
+    width: 100%;
+    background-image: url(./asset/imagenes/burga-03.jpg);
+    background-size: cover;
+    border-bottom: #000000 solid 3px;
+}
+
+.burga {
+    position: absolute;
+    width: 280px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto Slab";
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    right: 210px;
+    margin-top: 230px;
+    
+}
+.burga h2{
+    font-weight: 600;
+    color: #000000;
+}
+.burga p{
+    font-weight: 400;
+}
+.burga a{
+    text-decoration: none;
+    height: 70px;
+    width: 160px;
+    color: #840000;
+    background-color: #FFD249;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+}
+.burga a:hover{
+    color: #FFD249;
+    background-color: #840000;
+    font-weight: 600;
+}
+
+
+
+.contenidoPasta{
+    height: 700px;
+    width: 100%;
+    background-image: url(./asset/imagenes/pasta-04.jpg);
+    background-size: cover;
+    border-bottom: #000000 solid 3px;
+}
+
+.pasta {
+    position: absolute;
+    width: 280px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto Slab";
+    text-align: center;
+    margin-left: 140px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.pasta h2{
+    font-weight: 600;
+    color: #000000;
+}
+.pasta p{
+    font-weight: 400;
+}
+.pasta a{
+    text-decoration: none;
+    height: 70px;
+    width: 160px;
+    color: #840000;
+    background-color: #FFD249;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+}
+.pasta a:hover{
+    color: #FFD249;
+    background-color: #840000;
+    font-weight: 600;
+}
+
+footer{
+    text-align: center;
+    background-color: #EDEDED;
+    font-family: "Roboto Slab";
+}
+footer p{
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+footer i{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    letter-spacing: 15px;
+    color: #000000;
+}
+footer i:hover{
+    color: #840000 ;
+}
+.subir{
+    position: fixed;
+    background-color: #EDEDED;
+    color: #840000;
+    font-size: 30px;
+    width: 32px;
+    height: 32px;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border-color: #840000;
+    border: solid 2px;
+}
+.subir:hover{
+    background-color: #EDEDED;
+    color: #FFD249 ;
+}
