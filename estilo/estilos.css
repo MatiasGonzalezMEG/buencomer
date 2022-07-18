@@ -58,7 +58,7 @@ ul {
 .contenidoPizza{
     height: 700px;
     width: 100%;
-    background-image: url(./asset/imagenes/pizza-02.jpg);
+    background-image: url(../asset/imagenes/pizza-02.jpg);
     background-size: cover;
     border-bottom: #000000 solid 3px;
 }
@@ -102,7 +102,7 @@ ul {
 .contenidoBurga{
     height: 700px;
     width: 100%;
-    background-image: url(./asset/imagenes/burga-03.jpg);
+    background-image: url(../asset/imagenes/burga-03.jpg);
     background-size: cover;
     border-bottom: #000000 solid 3px;
 }
@@ -148,7 +148,7 @@ ul {
 .contenidoPasta{
     height: 700px;
     width: 100%;
-    background-image: url(./asset/imagenes/pasta-04.jpg);
+    background-image: url(../asset/imagenes/pasta-04.jpg);
     background-size: cover;
     border-bottom: #000000 solid 3px;
 }
