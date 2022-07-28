@@ -1,47 +1,65 @@
 alert("Bienvenidos al buen comer, el precio es por persona.")
 
-let comida = parseInt (prompt("Ingrese el numero segun corresponda de lo que va a comer 1- Pizza: $400 2- Hamburguesa: $500 3- Pasta: $300:  "))
-let personas = parseInt (prompt("Ingrese el numero de personas que van a comer, recuerde que solo se permiten 4 personas: "))
-
-console.log ("Comida seleccionada: " + comida)
-console.log ("Personas que van a comer: " + personas)
-
-const listaclientes = [];
-let cantidad = personas;
-
-do {
-    let entrada = prompt("Ingresar nombre: ");
-    listaclientes.push(entrada);
-    console.log(listaclientes.legth);
-} while (listaclientes.length != cantidad)
-    console.log (listaclientes)
-;
-alert("Los nombres de los clientes son: " + listaclientes)
-
 let precio = 0;
+let descuento = 200;
+let preciodescuento = 0;
+let menores = 0;
+
+let comida = parseInt (prompt("Ingrese el numero segun corresponda de lo que va a comer 1-Pizza 2- Hamburguesa 3- Pasta:  "))
 
 if(comida == 1 ){
-    precio = 400
-    console.log ("El precio por persona es: " + precio)
+    precio = 400;
+    alert("El precio por persona es de $400")
+    comida = "Pizza"
 } else if (comida == 2){
-    precio = 500
-    console.log ("El precio por persona es: " + precio)
+    precio = 500;
+    alert("El precio por persona es de $500")
+    comida = "Hamburguesa"
 } else if (comida == 3 || comida < 3) {
-    precio = 300
-    console.log ("El precio por persona es: " + precio)
+    precio = 300;
+    alert("El precio por persona es de $300")
+    comida = "Pasta"
 } else{
     console.log ("No corresponde")
 }
 
-let preciototal = precio * personas
-console.log ("El precio total sin descuento es:" + preciototal)
+let personas = parseInt (prompt("Ingrese el numero de personas que van a comer, recuerde que solo se permiten 4 personas: "))
 
-if (personas > 2){
-    let total = preciototal * 0.2
-    alert("El total a pagar es: " + total)
-} else {
-    alert("El total a pagar es: " + preciototal)
+precioTotal = precio * personas;
+
+class Clientes {
+    constructor (nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+/ ARRAY DE Clientes /
+let listaPersonas = []
+
+const agregarpersona = () => {
+    let nombre = prompt("¿Cuál es el nombre de la persona a comer?");
+    let edad = parseInt(prompt("¿Cuál es la edad de esta persona?"));
+    let clienteNuevo = new Clientes (nombre, edad);
+    listaPersonas.push(clienteNuevo);
+}
+for ( let i = 1 ; i <= personas ; i++){
+    agregarpersona()
 }
 
+console.log(listaPersonas)
 
-alert("Ahora solo falta reservar tu mesa. Muchas gracias")
+
+listaPersonas.forEach(persona => {
+    if (persona.edad < 12) {
+        precioTotal = precioTotal - descuento;
+        menores = menores + 1;
+    }
+})
+console.log(menores)
+
+if (menores > 1) {
+    alert("Tiene descuento de 200$ por el total de " + menores + "menor." )
+    alert("El precio a pagar es de: " + precioTotal)
+} else {
+    alert("El precio a pagar es de: " + precio)
+}
