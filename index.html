@@ -26,10 +26,10 @@
                             <a class="nav-link" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Promociones</a>
+                            <a class="nav-link" href="./pages/promociones.html">Promociones</a>
                         </li>
                         <li   li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -37,26 +37,60 @@
         </nav>
 
     </header>
+    
+    <div class="informacion" id="reserva">
+        <form class="contenedor" id="contenedor">
+            <div class="dividido">
+                <p>Elige que comida van a comer: </p>
+                <select class="comida_btn" id="comida">
+                    <option>Elige una opción</option>
+                    <option>Pizza</option>
+                    <option>Hamburguesa</option>
+                    <option>Pastas</option>
+                </select>
+            </div>
+            <div class="dividido">
+                <p>Eliga cuantas personas van a comer:</p>
+                <select id="personas">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+            <div class="dividido">    
+                <label >Ingresa tu nombre</label>
+                    <input  type="text" id="nombre">
+            </div>
+            <div  class="dividido">
+                <label  >Ingresa tu Edad</label>
+                    <input  type="number" id="edad">
+            </div>        
+            <button id="btn">Reservar</button>
+        </form>
+        <div id="informacion" class="cajon_inf"></div>
+    </div>
+    
 
     <main class="contenidoPizza">
         <section class="pizza">
                 <h2>La mejor pizza</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nulla, quam ab aut ad, consectetur accusantium eaque omnis minus, in aspernatur deserunt officia autem! Modi praesentium beatae distinctio perspiciatis minus!</p>
-                <a href="">Reserva tu mesa</a>
+                <a href="#reserva">Reserva tu mesa</a>
         </section>
     </main>
     <main class="contenidoBurga">
         <section class="burga">
                 <h2>La mejor hamburugesa</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nulla, quam ab aut ad, consectetur accusantium eaque omnis minus, in aspernatur deserunt officia autem! Modi praesentium beatae distinctio perspiciatis minus!</p>
-                <a href="">Reserva tu mesa</a>
+                <a href="#reserva">Reserva tu mesa</a>
         </section>
     </main>
     <main class="contenidoPasta">
         <section class="pasta">
                 <h2>La mejor pasta</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nulla, quam ab aut ad, consectetur accusantium eaque omnis minus, in aspernatur deserunt officia autem! Modi praesentium beatae distinctio perspiciatis minus!</p>
-                <div class="btn-reserva"><a href="">Reserva tu mesa</a></div>
+                <div class="btn-reserva"><a href="#reserva">Reserva tu mesa</a></div>
         </section>
     </main>
     <footer>

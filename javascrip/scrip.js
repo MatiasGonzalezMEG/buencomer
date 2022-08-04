@@ -1,65 +1,108 @@
-alert("Bienvenidos al buen comer, el precio es por persona.")
+const comida = document.querySelector("#comida");
+console.log(comida)
 
-let precio = 0;
-let descuento = 200;
-let preciodescuento = 0;
-let menores = 0;
+const personas = document.querySelector("#personas");
 
-let comida = parseInt (prompt("Ingrese el numero segun corresponda de lo que va a comer 1-Pizza 2- Hamburguesa 3- Pasta:  "))
+const nombre = document.getElementById("nombre");
 
-if(comida == 1 ){
-    precio = 400;
-    alert("El precio por persona es de $400")
-    comida = "Pizza"
-} else if (comida == 2){
-    precio = 500;
-    alert("El precio por persona es de $500")
-    comida = "Hamburguesa"
-} else if (comida == 3 || comida < 3) {
-    precio = 300;
-    alert("El precio por persona es de $300")
-    comida = "Pasta"
-} else{
-    console.log ("No corresponde")
+const edad = document.querySelector("#edad");
+
+const boton = document.querySelector("#btn");
+
+const textoFinal = document.querySelectorAll(".nuevo_elemento")
+
+const form= document.querySelector("#contenedor")
+
+const informacion = document.querySelector("#informacion");
+
+informacion.style.display = "none"
+
+let precioComida = 0;
+let cantperson = 0;
+let comidaElegida = "";
+let reservaNombre = "";
+let cantpersonas = 0;
+
+
+/* OBJETO PRECIOS */
+const precios = {
+    pizza: 400,
+    burga: 500,
+    pastas: 300,
 }
 
-let personas = parseInt (prompt("Ingrese el numero de personas que van a comer, recuerde que solo se permiten 4 personas: "))
-
-precioTotal = precio * personas;
-
-class Clientes {
-    constructor (nombre, edad){
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-}
-/ ARRAY DE Clientes /
-let listaPersonas = []
-
-const agregarpersona = () => {
-    let nombre = prompt("¿Cuál es el nombre de la persona a comer?");
-    let edad = parseInt(prompt("¿Cuál es la edad de esta persona?"));
-    let clienteNuevo = new Clientes (nombre, edad);
-    listaPersonas.push(clienteNuevo);
-}
-for ( let i = 1 ; i <= personas ; i++){
-    agregarpersona()
-}
-
-console.log(listaPersonas)
-
-
-listaPersonas.forEach(persona => {
-    if (persona.edad < 12) {
-        precioTotal = precioTotal - descuento;
-        menores = menores + 1;
-    }
+/* FUNCION COMIDA */  
+comida.addEventListener("change", () => {
+    comidaElegida = comida.value
+    funcionComida()
 })
-console.log(menores)
 
-if (menores > 1) {
-    alert("Tiene descuento de 200$ por el total de " + menores + "menor." )
-    alert("El precio a pagar es de: " + precioTotal)
-} else {
-    alert("El precio a pagar es de: " + precio)
+let funcionComida = () => {
+    if (comidaElegida == "Pizza") {
+        precioComida = precios.pizza;
+    } else if (comidaElegida == "Hamburguesa") {
+        precioComida = precios.burga;
+    } else if (comidaElegida == "Pastas") {
+        precioComida = precios.pastas;
+    } else if (comidaElegida == "Elige una opción"){
+        Error
+    }
+    return(precioComida);
+}
+
+/* FUNCION PERSONAS */
+
+personas.addEventListener("change", () => {
+    cantperson = personas.value
+    funcionPersonas()
+    console.log(cantperson)
+})
+
+let funcionPersonas = () => {
+    if(personas.value == "1"){
+        cantpersonas = 1;
+    } else if (personas.value == "2"){
+        cantpersonas = 2;
+    }  else if (personas.value == "3"){
+        cantpersonas = 3;
+    } else if (personas.value == "4"){
+        cantpersonas = 4;
+    } return(cantpersonas);
+}
+
+/* VARIABLE PRECIO */
+
+    
+
+/* FUNCION NOMBRE */
+nombre.addEventListener("change", () => {
+    let reservaNombre = nombre.value
+    console.log(reservaNombre)
+})
+
+/* FUNCION EDAD */
+edad.addEventListener("change", () => {
+    let edadReserva = edad.value
+    console.log(edadReserva)
+})
+
+/* FORMULARIO */
+const formulario = document.querySelector("form");
+formulario.addEventListener("submit", (e)=>{
+    e.preventDefault();
+
+})
+
+/* Click */
+boton.onclick = () =>{
+    funcionPersonas()
+    funcionComida()
+    console.log(cantpersonas)
+    console.log(precioComida)
+    let costototal = cantpersonas * precioComida;
+    console.log(costototal)
+    form.style.display = "none";
+    informacion.style.display = "block"
+    informacion.innerHTML = `<p> El precio total a pagar es de: $AR ${costototal}. <br> La reserva fue hechap por  ${nombre.value} de edad ${edad.value}.</p>`
+
 }

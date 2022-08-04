@@ -55,6 +55,76 @@ ul {
 
 /* Inicio */
 
+.informacion{
+    height: 700px;
+    width: 100%;
+    background-image: url(../asset/imagenes/backgraund_fondo-01.jpg);
+    background-size: cover;
+    border-bottom: #000000 solid 3px;
+}
+
+form{
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto Slab";
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    right: 210px;
+    margin-top: 70px;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: space-around;
+}
+.dividido{
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    text-decoration: none;
+    height: 40px;
+    width: 100px;
+    color: #840000;
+    background-color: #FFD249;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+}
+#btn:hover{
+    color: #FFD249;
+    background-color: #840000;
+    font-weight: 600;
+}
+
+.cajon_inf{
+    position: absolute;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Roboto Slab";
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    right: 210px;
+    margin-top: 70px;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: space-around;
+}
+
+
 .contenidoPizza{
     height: 700px;
     width: 100%;
@@ -224,4 +294,13 @@ footer i:hover{
 .subir:hover{
     background-color: #EDEDED;
     color: #FFD249 ;
+}
+
+/* FONDO PROMOCIONES Y CONTACTO */
+.fondoPantallas{
+    height: 700px;
+    width: 100%;
+    background-image: url(../asset/imagenes/Fondo_pantallas-01.jpg);
+    background-size: cover;
+    border-bottom: #000000 solid 3px;
 }
