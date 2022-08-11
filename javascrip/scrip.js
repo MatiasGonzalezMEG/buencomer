@@ -5,7 +5,9 @@ const personas = document.querySelector("#personas");
 
 const nombre = document.getElementById("nombre");
 
+
 const edad = document.querySelector("#edad");
+
 
 const boton = document.querySelector("#btn");
 
@@ -70,10 +72,6 @@ let funcionPersonas = () => {
     } return(cantpersonas);
 }
 
-/* VARIABLE PRECIO */
-
-    
-
 /* FUNCION NOMBRE */
 nombre.addEventListener("change", () => {
     let reservaNombre = nombre.value
@@ -106,3 +104,15 @@ boton.onclick = () =>{
     informacion.innerHTML = `<p> El precio total a pagar es de: $AR ${costototal}. <br> La reserva fue hechap por  ${nombre.value} de edad ${edad.value}.</p>`
 
 }
+
+/* Json */
+localStorage.setItem("nombre", nombre.value);
+localStorage.setItem("edad", edad.value);
+
+let comidaJSON = JSON.stringify(comida.value)
+
+localStorage.setItem("Prodcuto", comidaJSON)
+
+let comidaJS = JSON.parse(localStorage.getItem('Producto'))
+
+console.log("Pedido reservado: ",comida.value)
