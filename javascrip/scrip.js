@@ -93,6 +93,11 @@ formulario.addEventListener("submit", (e)=>{
 
 /* Click */
 boton.onclick = () =>{
+    swal({
+        title: "Tu reserva fue aceptada!",
+        text: "Muchas gracias!!!",
+        icon: "success",
+      });
     funcionPersonas()
     funcionComida()
     console.log(cantpersonas)
